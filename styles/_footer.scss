@@ -1,0 +1,56 @@
+@import "./media_queries";
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .contact {
+    width: 50%;
+    height: 230px;
+    background-color: rgb(135, 8, 10);
+
+    #contacts {
+      font-size: 1.7rem;
+      padding: 1rem;
+    }
+
+    i {
+      padding: 1rem;
+    }
+
+    p {
+      color: $text-secondary-color;
+      font-size: large;
+      margin-left: 1rem;
+    }
+  }
+
+  .made {
+    width: 50%;
+    height: 230px;
+    background-color: rgb(167, 167, 8);
+
+    p {
+      padding: 3.7rem;
+      color: $text-secondary-color;
+      font-size: large;
+    }
+
+    .logo {
+      margin-left: 30rem;
+
+      @include tablet {
+        position: fixed;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+      }
+
+      i {
+        color: $text-primary-color;
+        font-size: medium;
+      }
+    }
+  }
+}

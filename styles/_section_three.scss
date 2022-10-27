@@ -1,0 +1,27 @@
+@import "./media_queries";
+
+#reviews:hover {
+  font-size: 3rem;
+}
+
+.section_three {
+  display: flex;
+
+  .review {
+    height: 27%;
+    margin: 13px;
+
+    h4 {
+      color: rgb(218, 39, 42);
+    }
+
+    &:hover {
+      padding: 7px;
+    }
+  }
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+    text-align: justify;
+  }
+}

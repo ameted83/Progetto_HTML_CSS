@@ -1,0 +1,94 @@
+$primary-color: black;
+$text-primary-color: rgb(109, 110, 111);
+$text-secondary-color: white;
+
+@import "./header";
+@import "./navbar";
+@import "./section_one";
+@import "./section_two";
+@import "./section_three";
+@import "./section_four";
+@import "./section_five";
+@import "./section_six";
+@import "./section_seven";
+@import "./footer";
+
+@import "./media_queries";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary-color;
+  color: $text-primary-color;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 17px;
+  color: $text-secondary-color;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: $text-secondary-color;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+section {
+  height: 30%;
+  margin: 3rem 13rem;
+}
+
+i {
+  color: $text-secondary-color;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: rgb(251, 251, 75);
+}
+
+h1:hover {
+  color: $text-primary-color;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(251, 251, 75);
+  }
+
+  p {
+    color: antiquewhite;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  @include btn();
+}

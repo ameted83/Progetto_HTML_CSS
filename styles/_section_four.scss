@@ -1,0 +1,36 @@
+@import "./media_queries";
+
+.section_four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .section_course {
+    &:hover {
+      transform: translateY(13px);
+    }
+  }
+
+  h3 {
+    margin-right: 13px;
+    color: rgb(251, 251, 75);
+  }
+
+  h5 {
+    margin-right: 13px;
+    color: rgb(251, 251, 75);
+  }
+
+  p {
+    margin-right: 13px;
+  }
+
+  span {
+    font-style: italic;
+  }
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+    text-align: justify;
+  }
+}

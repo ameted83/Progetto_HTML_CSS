@@ -1,0 +1,60 @@
+@import "./media_queries";
+
+.section_six,
+.section_six-box {
+  display: grid;
+  gap: 1rem;
+  color: $text-secondary-color;
+  text-align: center;
+  border: 1px solid rgb(251, 251, 75);
+  border-radius: 13px;
+  padding: 1rem;
+  grid-template-areas:
+    "job job job"
+    "growth positions you"
+    "tech problem you";
+
+  h3 {
+    color: rgb(218, 39, 42);
+    grid-area: job;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  span {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .growth {
+    grid-area: growth;
+  }
+
+  .positions {
+    grid-area: positions;
+  }
+
+  .you {
+    grid-area: you;
+    text-align: left;
+  }
+
+  .tech {
+    grid-area: tech;
+  }
+
+  .problem {
+    grid-area: problem;
+  }
+
+  .section_six-box {
+    margin-left: 27px;
+  }
+
+  @include tablet {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+}

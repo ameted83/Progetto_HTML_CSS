@@ -1,0 +1,145 @@
+@import "./media_queries";
+
+@mixin btn {
+  .btn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: $text-secondary-color;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 167, 62, 1) 0%,
+      rgba(102, 247, 113, 1) 100%
+    );
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    margin-top: 27px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+    }
+
+    &:active {
+      box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+    }
+  }
+}
+
+.section_one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    @include tablet {
+      font-size: 1.7rem;
+    }
+  }
+
+  .section_text {
+    display: flex;
+
+    p {
+      margin-left: 13px;
+      padding: 7px;
+      color: white;
+    }
+
+    i {
+      background-color: rgb(3, 73, 3);
+      margin: 7px;
+      border-radius: 3px;
+    }
+  }
+
+  @include btn();
+
+  .btn_section_one {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    margin-left: 13px;
+
+    .btn_one {
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      font-size: 1.1rem;
+      text-align: start;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 7px;
+
+      &:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-btn 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 7px;
+      }
+
+      @keyframes glowing-btn {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+
+      &:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
+    }
+
+    @include tablet {
+      position: relative;
+      margin-top: 13px;
+    }
+  }
+
+  img {
+    margin-top: 13px;
+    max-width: 53%;
+    border-radius: 13%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

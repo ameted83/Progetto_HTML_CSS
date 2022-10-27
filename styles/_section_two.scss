@@ -1,0 +1,52 @@
+@import "./media_queries";
+
+.section_two {
+  display: grid;
+  gap: 3rem;
+  grid-template-areas:
+    "domand domand"
+    "quality cv"
+    "flessibility support";
+
+  h3 {
+    color: rgb(251, 251, 75);
+  }
+
+  .quality,
+  .flessibility,
+  .cv,
+  .support {
+    padding: 0.7rem;
+    margin-bottom: 13px;
+    border: 1px solid whitesmoke;
+    background: $text-primary-color;
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .domand {
+    grid-area: domand;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .quality {
+    grid-area: quality;
+  }
+
+  .cv {
+    grid-area: cv;
+  }
+
+  .support {
+    grid-area: support;
+  }
+
+  @include tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,28 @@
+@import "./media_queries";
+
+nav {
+  i {
+    color: $text-secondary-color;
+  }
+
+  i {
+    color: rgb(218, 39, 42);
+  }
+
+  .container_navbar {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      position: fixed;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.section_five {
+  box-shadow: rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+  display: grid;
+  gap: 1rem;
+  color: antiquewhite;
+  text-align: center;
+  padding: 1rem;
+  grid-template-areas:
+    "talent talent"
+    "choose choose"
+    "risk_0 deferred_payment";
+
+  .talent {
+    grid-area: talent;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  .choose {
+    grid-area: choose;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(218, 39, 42);
+  }
+  .risk_0 {
+    margin-left: 17px;
+    p {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .btn_0 {
+      background-color: #fff000;
+      border-radius: 12px;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px 15px;
+      text-align: center;
+      transition: 200ms;
+      box-sizing: border-box;
+      border: 0;
+      font-size: 16px;
+
+      &:not(:disabled):hover,
+      &:not(:disabled):focus {
+        outline: 0;
+        background: #f4e603;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2),
+          0 3px 8px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      &:disabled {
+        filter: saturate(0.2) opacity(0.5);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .deferred_payment {
+    p {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .button-five {
+      background-color: #cf245f;
+      background-image: linear-gradient(
+        to bottom right,
+        #fcd34d,
+        #ef4444,
+        #ec4899
+      );
+      border: 0;
+      border-radius: 0.25rem;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.125rem; /* 18px */
+      font-weight: 600;
+      line-height: 1.75rem; /* 28px */
+      padding: 1rem 1.25rem;
+      text-align: center;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      @media (min-width: 1024px) {
+        .button-five {
+          font-size: 1.5rem; /* 24px */
+          padding: 1rem 1.5rem;
+          line-height: 2rem; /* 32px */
+        }
+      }
+    }
+  }
+
+  span {
+    text-decoration: line-through brown solid 3px;
+  }
+}
